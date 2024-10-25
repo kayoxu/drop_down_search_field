@@ -167,6 +167,9 @@ class TextFieldConfiguration {
   /// Same as [TextField.scrollPadding](https://docs.flutter.io/flutter/material/TextField/scrollPadding.html)
   final EdgeInsets scrollPadding;
 
+  final EdgeInsets? inputFieldPadding;
+
+
   /// Configures how the platform keyboard will select an uppercase or lowercase keyboard.
   ///
   /// Same as [TextField.TextCapitalization](https://docs.flutter.io/flutter/material/TextField/textCapitalization.html)
@@ -214,6 +217,7 @@ class TextFieldConfiguration {
       this.onTap,
       this.onTapOutside,
       this.textDirection,
+      this.inputFieldPadding,
       this.scrollPadding = const EdgeInsets.all(20.0),
       this.enableInteractiveSelection = true,
       this.autofillHints});
@@ -281,6 +285,7 @@ class TextFieldConfiguration {
       onEditingComplete: onEditingComplete ?? this.onEditingComplete,
       onTap: onTap ?? this.onTap,
       scrollPadding: scrollPadding ?? this.scrollPadding,
+      inputFieldPadding: inputFieldPadding,
       textCapitalization: textCapitalization ?? this.textCapitalization,
       textInputAction: textInputAction ?? this.textInputAction,
       textDirection: textDirection ?? this.textDirection,
